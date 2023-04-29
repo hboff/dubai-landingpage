@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformular</title>
+    <!-- Fügen Sie hier Ihre eigenen Styles und Skripte hinzu -->
+</head>
+
+<body>
+    <!-- Contact -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Kontaktformular</h2>
+                <h3 class="section-subheading text-muted">Wir freuen uns auf ihre Nachricht.</h3>
+            </div>
+
+            <form id="contactForm">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input class="form-control" id="name" type="text" placeholder="Vorname und Nachname *"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input class="form-control" id="email" type="email" placeholder="Email *"
+                                data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <!-- Phone number input-->
+                            <input class="form-control" id="phone" type="tel" placeholder="Telefonnummer*"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <!-- Message input-->
+                            <textarea class="form-control" id="message" placeholder="Nachricht *"
+                                data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit Button-->
+                <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton"
+                        type="submit">Senden</button></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Hier können Sie Ihre eigene Validierung hinzufügen
+            // oder die vorhandene Validierung des Formulars verwenden
+
+            // Wenn das Formular erfolgreich abgesendet wurde
+            // Weiterleitung zur "Thank you"-Seite
+            window.location.href = "thank-you.html";
+        });
+    </script>
+</body>
+
+</html>
